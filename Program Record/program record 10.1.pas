@@ -1,0 +1,20 @@
+Program DataMahasiswaku;
+Uses Crt;
+Type
+DataMahasiswa=Record
+NIM : string[9];
+
+Nama : string[20];
+Nilai : real;
+End;
+Var x:DataMahasiswa;
+Begin
+Clrscr;
+x.NIM :='090101001';
+x.Nama :='Bambang';
+x.Nilai :=2.38;
+writeln('NIM = ',x.NIM);
+writeln ('Nama =',x. Nama);
+Writeln('Nilai =',x.Nilai:2:2);
+Readln;
+End.

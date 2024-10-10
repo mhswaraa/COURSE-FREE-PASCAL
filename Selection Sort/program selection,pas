@@ -1,0 +1,43 @@
+program selectionsort;
+uses crt;
+var
+angka: array[1..5] of integer;
+i,a,n,temp: integer;
+begin
+clrscr;
+write('masukkan banyak data: ');readln(n);
+for i:=1 to n do
+begin
+write('masukkan angka ke',i,' = ');readln(angka[i]);
+end;
+writeln;
+{Tampilkan data sebelum diurutkan}
+writeln('Sebelum diurutkan : ');
+for i:=1 to n do
+begin
+writeln('angka ke-', i, ' : ', angka[i]);
+end;
+{Lakukan pengurutan/sorting}
+for i:=1 to n-1 do
+begin
+for a:=i+1 to n do
+begin
+if(angka[a] < angka[i]) then
+begin
+temp := angka[a];
+angka[a] := angka[i];
+angka[i] := temp;
+end;
+end;
+end;
+{Tampilkan data setelah diurutkan}
+writeln('Setelah diurutkan : ');
+for i:=1 to n do
+begin
+writeln('angka ke-', i, ' : ', angka[i]);
+readln;
+end;
+readln;
+end.
+
+CONTOH
